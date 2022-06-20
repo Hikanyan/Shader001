@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: rubble001
+  m_Name: ScrollShader
   m_Shader: {fileID: -6465566751694194690, guid: 3dca78fa962733848a04632b0a14b60d, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
