@@ -22,7 +22,7 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _ScaleFactor: 3.07
+    - _ScaleFactor: 3
     - _StartDistance: 11.17
     m_Colors:
     - _FarColor: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
