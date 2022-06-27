@@ -4,6 +4,7 @@ Shader "Custom/Polygon Destruction"
 	{
 		_FarColor("Far Color", Color) = (1, 1, 1, 1)
 		_NearColor("Near Color", Color) = (0, 0, 0, 1)
+		_Texture("Select Texture",2D) = "White"{}
 		_ScaleFactor("Scale Factor", float) = 0.5
 		_StartDistance("Start Distance", float) = 3.0
 	}
@@ -14,6 +15,7 @@ Shader "Custom/Polygon Destruction"
 		Pass
 		{
 			CGPROGRAM
+
 			#pragma vertex vert
 			#pragma geometry geom
 			#pragma fragment frag
@@ -24,7 +26,11 @@ Shader "Custom/Polygon Destruction"
 			fixed4 _NearColor;
 			fixed _ScaleFactor;
 			fixed _StartDistance;
-
+			fixed4 _Texture;
+			struct Input {
+				float2 uv_MainTex;
+			};
+			sampler2D _MainTex;
 			struct appdata
 			{
 				float4 vertex : POSITION;
@@ -35,13 +41,13 @@ Shader "Custom/Polygon Destruction"
 			{
 				float4 vertex : SV_POSITION;
 				float2 uv : TEXCOORD0;
-				fixed4 color : COLOR;
+				float4 color : COLOR;
 			};
 
 			// ƒ‰ƒ“ƒ_ƒ€‚È’l‚ð•Ô‚·
 			float rand(float2 seed)
 			{
-				return frac(sin(dot(seed.xy, float2(12.9898, 78.233))) * 43758.5453);
+				return frac(sin(dot(seed.xy, float2(13.000, 70.000))) * 40000.000);
 			}
 
 			appdata vert(appdata v)
@@ -92,6 +98,7 @@ Shader "Custom/Polygon Destruction"
 				fixed4 col = i.color;
 				return col;
 			}
+
 			ENDCG
 		}
 	}
