@@ -6,7 +6,8 @@ Shader "Custom/Shader_Normal" {
 		_Metallic("Metallic", Range(0, 1)) = 0.0
 
 		_BumpMap("Normal Map", 2D) = "bump" {}
-		_BumpScale("Normal Scale", Range(0, 10)) = 1.0
+		_BumpScale("Normal Scale01", Range(0, 10)) = 1.0
+		_TexScale("Normal Scale02", Range(0, 10)) = 1.0
 	}
 
 		SubShader{
@@ -28,6 +29,7 @@ Shader "Custom/Shader_Normal" {
 
 				sampler2D _BumpMap;
 				half _BumpScale;
+				half _TexScale;
 
 				struct Input {
 					float2 uv_MainTex;
@@ -41,7 +43,7 @@ Shader "Custom/Shader_Normal" {
 					o.Smoothness = _Glossiness;
 					o.Alpha = c.a;
 
-					fixed4 n = tex2D(_BumpMap, IN.uv_MainTex);
+					fixed4 n = tex2D(_BumpMap, IN.uv_MainTex * _TexScale);
 
 					o.Normal = UnpackScaleNormal(n, _BumpScale);
 				}
