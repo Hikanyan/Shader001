@@ -5,8 +5,8 @@ Shader "Hikanyan/toon" {
         _Color("Color", Color) = (1, 1, 1, 1)
         // メインテクスチャ
         _MainTex("Albedo(RGB)", 2D) = "white" {}
-    // rampテクスチャ
-    _RampTex("Ramp", 2D) = "white" {}
+        // rampテクスチャ
+        _RampTex("Ramp", 2D) = "white" {}
     }
 
         // Shaderの中身を記述
