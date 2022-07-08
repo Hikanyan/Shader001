@@ -17,7 +17,7 @@ Shader "Custom/Shader_Normal" {
 			}
 
 			LOD 200
-
+			Cull Off
 			CGPROGRAM
 				#pragma target 3.0
 				#pragma surface surf Standard fullforwardshadows
