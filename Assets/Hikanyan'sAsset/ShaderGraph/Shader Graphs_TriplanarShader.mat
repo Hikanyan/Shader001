@@ -38,7 +38,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Base_Collar_001:
-        m_Texture: {fileID: 2800000, guid: 902c0f65f34fe2b4ba2aa5d6e1371f63, type: 3}
+        m_Texture: {fileID: 2800000, guid: a6fa9e28d99047d4290d24b08686870a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Base_Collar_002:
@@ -53,10 +53,20 @@ Material:
         m_Texture: {fileID: 2800000, guid: f438ad7c1401eb44c828f288e4a58b14, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Normal_Map_001:
+        m_Texture: {fileID: 2800000, guid: f438ad7c1401eb44c828f288e4a58b14, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal_Map_002:
+        m_Texture: {fileID: 2800000, guid: f438ad7c1401eb44c828f288e4a58b14, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Angle: 0.703
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
+    - _Gradient: 0.316
     - _Object_Soace: 0
     - _Tiling: 0.1
     - _Tiling001: 1
